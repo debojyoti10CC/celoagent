@@ -3,6 +3,7 @@
 import { generateText, type UIMessage } from 'ai';
 import { cookies } from 'next/headers';
 import {
+  // We import the dummy functions from our hacked queries.ts
   deleteMessagesByChatIdAfterTimestamp,
   getMessageById,
   updateChatVisiblityById,
@@ -33,14 +34,35 @@ export async function generateTitleFromUserMessage({
   return title;
 }
 
+// ============================================
+// HACKATHON FIX STARTS HERE
+// ============================================
+// Replace the original deleteTrailingMessages function with this one:
 export async function deleteTrailingMessages({ id }: { id: string }) {
-  const [message] = await getMessageById({ id });
+  // HACKATHON FIX: Check if message exists before using it
+  // Our dummy getMessageById (in lib/db/queries.ts) returns [],
+  // so we must add this check to prevent a crash.
+  const messages = await getMessageById({ id });
+
+  // If messages is empty, messages[0] is undefined.
+  // This 'if' block fixes the crash.
+  if (messages.length === 0) {
+    return; // Do nothing
+  }
+
+  // This code below will only run if a message is found (which it won't with the dummy DB)
+  // It won't crash because of the 'if' block above.
+  const message = messages[0];
 
   await deleteMessagesByChatIdAfterTimestamp({
     chatId: message.chatId,
     timestamp: message.createdAt,
   });
 }
+// ============================================
+// HACKATHON FIX ENDS HERE
+// ============================================
+
 
 export async function updateChatVisibility({
   chatId,
