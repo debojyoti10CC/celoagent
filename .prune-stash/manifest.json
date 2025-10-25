@@ -1,0 +1,22 @@
+[
+  {
+    "rel": ".next",
+    "dest": "/Users/viral/Projects/celo/celo-composer/celo-composer/templates/ai/chat-template/.prune-stash/.next"
+  },
+  {
+    "rel": "node_modules",
+    "dest": "/Users/viral/Projects/celo/celo-composer/celo-composer/templates/ai/chat-template/.prune-stash/node_modules"
+  },
+  {
+    "rel": "tsconfig.tsbuildinfo",
+    "dest": "/Users/viral/Projects/celo/celo-composer/celo-composer/templates/ai/chat-template/.prune-stash/tsconfig.tsbuildinfo"
+  },
+  {
+    "rel": ".env",
+    "dest": "/Users/viral/Projects/celo/celo-composer/celo-composer/templates/ai/chat-template/.prune-stash/.env"
+  },
+  {
+    "rel": ".env.local",
+    "dest": "/Users/viral/Projects/celo/celo-composer/celo-composer/templates/ai/chat-template/.prune-stash/.env.local"
+  }
+]
