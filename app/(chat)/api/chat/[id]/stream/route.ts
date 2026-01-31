@@ -11,11 +11,6 @@ import { createUIMessageStream, JsonToSseTransformStream } from 'ai';
 import { getStreamContext } from '../../route';
 import { differenceInSeconds } from 'date-fns';
 
-export async function GET(
-  _: Request,
-  { params }: { params: Promise<{ id: string }> },
-) {
-  const { id: chatId } = await params;
 
   const streamContext = getStreamContext();
   const resumeRequestedAt = new Date();
