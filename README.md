@@ -7,10 +7,6 @@ An intelligent AI assistant for interacting with the Celo blockchain ecosystem. 
 - **Multi-Model AI Support**: Integrates with multiple AI providers (OpenAI, Anthropic, Google, Mistral, DeepSeek, xAI)
 - **Wallet Integration**: Connect and manage Celo wallet addresses
 - **Interactive Chat Interface**: Real-time conversations with AI models
-- **Artifact Generation**: Create and edit code, documents, and data visualizations
-- **User Authentication**: Secure login and guest access
-- **Chat History**: Persistent conversation storage and retrieval
-- **File Upload Support**: Process and analyze uploaded documents
 
 ## Getting Started
 
