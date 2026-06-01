@@ -3,7 +3,7 @@
 An intelligent AI assistant for interacting with the Celo blockchain ecosystem. This application provides a conversational interface to help users navigate Celo blockchain operations, smart contracts, and DeFi protocols through natural language interactions.
 
 ## Features
-
+ 
 
 - **Interactive Chat Interface**: Real-time conversations with AI models
 -  **Artifact Generation**: Create and edit code, documents, and data visualizations
